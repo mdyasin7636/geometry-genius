@@ -29,21 +29,23 @@
                         <img src="images/triangle.png" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title">Triangle</h2>
+                        <h2 id="geometry-element" class="card-title">Triangle</h2>
                         <p>Area (A) = 0.5 X b x h</p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="b">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input id="triangle-first-input-field" type="text"
+                                    class="border rounded px-4 py-2 w-full" placeholder="b">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="h">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input id="triangle-second-input-field" type="text"
+                                    class="border rounded px-4 py-2 w-full" placeholder="h">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
-                          </div>
-                                                    
+                        </div>
+
                         <div class="card-actions">
-                            <button class="btn btn-primary px-24 mt-5">Calculate</button>
+                            <button id="triangle-btn" class="btn btn-primary px-24 mt-5">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -56,15 +58,15 @@
                         <p>Area (A) = w x l</p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="w">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="w">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="l">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="l">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
-                          </div>
-                                                    
+                        </div>
+
                         <div class="card-actions">
                             <button class="btn btn-primary px-24 mt-5">Calculate</button>
                         </div>
@@ -79,15 +81,15 @@
                         <p>Area (A) = b x h</p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="b">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="b">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="h">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="h">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
-                          </div>
-                                                    
+                        </div>
+
                         <div class="card-actions">
                             <button class="btn btn-primary px-24 mt-5">Calculate</button>
                         </div>
@@ -102,15 +104,15 @@
                         <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="d1">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="d1">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="d2">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="d2">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
-                          </div>
-                                                    
+                        </div>
+
                         <div class="card-actions">
                             <button class="btn btn-primary px-24 mt-5">Calculate</button>
                         </div>
@@ -125,15 +127,15 @@
                         <p>Area (A) = 0.5 x p x b </p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="p">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="p">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="b">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="b">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
-                          </div>
-                                                    
+                        </div>
+
                         <div class="card-actions">
                             <button class="btn btn-primary px-24 mt-5">Calculate</button>
                         </div>
@@ -148,23 +150,30 @@
                         <p>Area (A) = &pi;ab </p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="b">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="b">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
                             <div class="flex">
-                              <input type="text" class="border rounded px-4 py-2 w-full" placeholder="h">
-                              <p class="ml-2 text-gray-500 text-xl">cm</p>
+                                <input type="text" class="border rounded px-4 py-2 w-full" placeholder="h">
+                                <p class="ml-2 text-gray-500 text-xl">cm</p>
                             </div>
-                          </div>
-                                                    
+                        </div>
+
                         <div class="card-actions">
                             <button class="btn btn-primary px-24 mt-5">Calculate</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="area-calculation w-[25%] mx-auto">
+            <div class="area-calculation w-full lg:w-[30%] mx-auto">
                 <h1 class="text-2xl text-center font-bold underline mt-5">Area Calculation</h1>
+                <div>
+                    <table class="table w-full">
+                        <tbody id="area-calculation-body">
+                            
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
     </main>
