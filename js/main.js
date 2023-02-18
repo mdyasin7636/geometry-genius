@@ -1,19 +1,46 @@
+let serial = 0;
+
 document.getElementById('triangle-btn').addEventListener('click', function(){
-   
+    serial += 1;
     const triangleTitle = document.getElementById('triangle-title').innerText;
     const triangleFirstInputField = document.getElementById('triangle-first-input-field').value;
     const triangleSecondInputField = document.getElementById('triangle-second-input-field').value;
 
+    if ( isNaN(triangleFirstInputField) ||
+        isNaN(triangleSecondInputField) ||
+        triangleFirstInputField == "" ||
+        triangleSecondInputField == "" ||
+        triangleFirstInputField < 0 ||
+        triangleSecondInputField < 0 
+      ) {
+        return alert("Please enter a valid number");
+      }
+    
     const TriangleMultiplication =  0.5 * parseFloat(triangleFirstInputField) * parseFloat(triangleSecondInputField);
     const newTriangleMultiplication = TriangleMultiplication.toFixed(2);
 
     displayData(triangleTitle, newTriangleMultiplication);
+
+    // document.getElementById('triangle-first-input-field').value = '';
+    // document.getElementById('triangle-second-input-field').value = '';
+
 })
 
 document.getElementById('rectangle-btn').addEventListener('click', function(){
+    serial += 1;
     const rectangleTitle = document.getElementById('rectangle-title').innerText;
     const rectangleFirstInputField = document.getElementById('rectangle-first-input-field').value;
     const rectangleSecondInputField = document.getElementById('rectangle-second-input-field').value;
+
+    if ( isNaN(rectangleFirstInputField) ||
+        isNaN(rectangleSecondInputField) ||
+        rectangleFirstInputField == "" ||
+        rectangleSecondInputField == "" ||
+        rectangleFirstInputField < 0 ||
+        rectangleSecondInputField < 0 
+      ) {
+        return alert("Please enter a valid number");
+      }
 
     const rectangleMultiplication = parseFloat(rectangleFirstInputField) * parseFloat(rectangleSecondInputField);
     const newRectangleMultiplication = rectangleMultiplication.toFixed(2);
@@ -22,6 +49,7 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
 })
 
 document.getElementById('parallelogram-btn').addEventListener('click', function(){
+    serial += 1;
     const parallelogramTitle = document.getElementById('parallelogram-title').innerText;
     const parallelogramFirstInputField = document.getElementById('parallelogram-first-input-field').value;
     const parallelogramSecondInputField = document.getElementById('parallelogram-second-input-field').value;
@@ -33,6 +61,7 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
 })
 
 document.getElementById('rhombus-btn').addEventListener('click', function(){
+    serial += 1;
     const rhombusTitle = document.getElementById('rhombus-title').innerText;
     const rhombusFirstInputField = document.getElementById('rhombus-first-input-field').value;
     const rhombusSecondInputField = document.getElementById('rhombus-second-input-field').value;
@@ -45,6 +74,7 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
 
 
 document.getElementById('pentagon-btn').addEventListener('click', function(){
+    serial += 1;
     const pentagonTitle = document.getElementById('pentagon-title').innerText;
     const pentagonFirstInputField = document.getElementById('pentagon-first-input-field').value;
     const pentagonSecondInputField = document.getElementById('pentagon-second-input-field').value;
@@ -57,14 +87,13 @@ document.getElementById('pentagon-btn').addEventListener('click', function(){
 
 
 document.getElementById('ellipse-btn').addEventListener('click', function(){
+    serial += 1;
     const ellipseTitle = document.getElementById('ellipse-title').innerText;
     const ellipseFirstInputField = document.getElementById('ellipse-first-input-field').value;
     const ellipseSecondInputField = document.getElementById('ellipse-second-input-field').value;
 
     const ellipseMultiplication = 3.14 * parseFloat(ellipseFirstInputField) * parseFloat(ellipseSecondInputField);
     const newEllipseMultiplication = ellipseMultiplication.toFixed(2);
-    ellipseFirstInputField.value = '';
-    ellipseSecondInputField.value = '';
 
     displayData(ellipseTitle, newEllipseMultiplication);
 })
@@ -73,9 +102,10 @@ function displayData(geometryTitle, geometryMultiplication){
     const areaCalculationBody = document.getElementById('area-calculation-body')
     const tr = document.createElement('tr');
     tr.innerHTML=`
-    <td>${1}</td>
+    <td>${serial}</td>
     <td>${geometryTitle}</td>
     <td>${geometryMultiplication}cm<sup>2</sup></td>
+    <td><button class="btn btn-sm btn-primary">Convert to m<sup>2</sup></button></td>
     
     `
     areaCalculationBody.appendChild(tr)
