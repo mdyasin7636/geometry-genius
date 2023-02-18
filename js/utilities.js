@@ -1,3 +1,5 @@
+/*create td common function*/
+
 function displayData(geometryTitle, geometryMultiplication){
     const areaCalculationBody = document.getElementById('area-calculation-body')
     const tr = document.createElement('tr');
@@ -11,6 +13,8 @@ function displayData(geometryTitle, geometryMultiplication){
     areaCalculationBody.appendChild(tr)
     
 }
+
+/*card background random color common function*/
 
 function addRandomColorOnHover(element) {
     element.addEventListener('mouseenter', function() {
