@@ -98,6 +98,10 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
     displayData(ellipseTitle, newEllipseMultiplication);
 })
 
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href = 'blog.html'
+})
+
 function displayData(geometryTitle, geometryMultiplication){
     const areaCalculationBody = document.getElementById('area-calculation-body')
     const tr = document.createElement('tr');
