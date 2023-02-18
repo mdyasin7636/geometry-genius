@@ -98,20 +98,21 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
     displayData(ellipseTitle, newEllipseMultiplication);
 })
 
+const card1 = document.getElementById('card-1');
+const card2 = document.getElementById('card-2');
+const card3 = document.getElementById('card-3');
+const card4 = document.getElementById('card-4');
+const card5 = document.getElementById('card-5');
+const card6 = document.getElementById('card-6');
+
+addRandomColorOnHover(card1);
+addRandomColorOnHover(card2);
+addRandomColorOnHover(card3);
+addRandomColorOnHover(card4);
+addRandomColorOnHover(card5);
+addRandomColorOnHover(card6);
+
 document.getElementById('blog-btn').addEventListener('click', function(){
     window.location.href = 'blog.html'
 })
-
-function displayData(geometryTitle, geometryMultiplication){
-    const areaCalculationBody = document.getElementById('area-calculation-body')
-    const tr = document.createElement('tr');
-    tr.innerHTML=`
-    <td>${serial}</td>
-    <td>${geometryTitle}</td>
-    <td>${geometryMultiplication}cm<sup>2</sup></td>
-    <td><button class="btn btn-sm btn-primary">Convert to m<sup>2</sup></button></td>
-    
-    `
-    areaCalculationBody.appendChild(tr)
-    
-}
+  
